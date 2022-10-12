@@ -32,8 +32,8 @@ export function Link() {
             notActive: "px-5 hover:text-gray-400 transition-colors"
         },
         {
-            title: 'LOG IN',
-            path: '/login',
+            title: 'SIGN IN',
+            path: '/signin',
             active: "px-5 text-gray-400",
             notActive: "px-5 hover:text-gray-400 transition-colors"
         },

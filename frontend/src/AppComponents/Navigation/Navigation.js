@@ -10,7 +10,7 @@ function Navigation() {
     return (
         <nav className="flex py-3 px-14 w-full bg-white items-center justify-between sticky top-0 z-10 ">
             <NavLink to={''}>
-                <img src="https://cdn.helloworldindonesia.com/bG9nby9vcmlnaW5hbC9vcmlnaW5fdHh0X3YyLnN2Zw==" alt="logo" className="w-36" />
+                <h1 className='font-bold tracking-widest'>HELLOWEDDING</h1>
             </NavLink>
 
             <div className="flex items-center justify-center">

@@ -11,7 +11,8 @@ import Prewedding from './pages/Prewedding/Prewedding';
 import Potrait from './pages/Potrait/Potrait';
 import About from './pages/About/About';
 import Package from './pages/Package/Package';
-import Login from './pages/Login/Login';
+import Signin from './pages/Signin/Signin';
+import Signup from './pages/Signup/Signup';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,7 +27,8 @@ root.render(
           <Route path='about' element={<About />} />
           <Route path='package' element={<Package />} />
         </Route>
-        <Route path='login' element={<Login />} />
+        <Route path='signin' element={<Signin />} />
+        <Route path='signup' element={<Signup />} />
       </Routes>
     </BrowserRouter>
 

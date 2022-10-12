@@ -11,7 +11,7 @@ function Homepage() {
                 <div className="flex flex-col relative">
                     <div className="bg-[#f5f5f5] absolute right-0 top-1/2 -translate-y-1/2  text-center flex flex-col items-center justify-between max-w-md h-1/2 px-10 py-24">
                         <div className="flex flex-col items-center">
-                            <img src="https://cdn.helloworldindonesia.com/bG9nby9vcmlnaW5hbC9vcmlnaW5fdHh0X3YyLnN2Zw==" alt="logo" className="w-32" />
+                            <h1 className='font-bold tracking-widest'>HELLOWEDDING</h1>
                             <h2 className="text-4xl mt-8">Lorem Ipsum</h2>
                             <p className="text-sm mt-5">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.
@@ -19,7 +19,7 @@ function Homepage() {
                         </div>
 
                         <div className="flex flex-col items-center">
-                            <img src="https://cdn.helloworldindonesia.com/bG9nby9vcmlnaW5hbC9vcmlnaW5fdHh0X3YyLnN2Zw==" alt="logo" className="w-32" />
+                            <h1 className='font-bold tracking-widest'>HELLOWEDDING</h1>
                             <h2 className="text-4xl mt-8">Lorem Ipsum</h2>
                             <p className="text-sm mt-5">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.
@@ -59,7 +59,7 @@ function Homepage() {
                     </div>
 
                     <div className="w-full text-center flex flex-col items-center justify-center">
-                        <img src="https://cdn.helloworldindonesia.com/bG9nby9vcmlnaW5hbC9vcmlnaW5fdHh0X3YyLnN2Zw==" alt="logo" className="w-32" />
+                        <h1 className='font-bold tracking-widest'>HELLOWEDDING</h1>
                         <h2 className="text-4xl mt-8">Pre Wedding</h2>
                         <p className="text-sm mt-5 mx-48 items-center justify-center">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem.
@@ -69,7 +69,7 @@ function Homepage() {
 
                 <div className="flex flex-col items-center justify-center my-20">
                     <div className="text-center flex flex-col items-center justify-end pb-[80px] bg-[url('https://cdn.helloworldindonesia.com/c3ZnL29yaWdpbmFsL29iajEuc3Zn')] bg-no-repeat bg-center w-full h-[300px]">
-                        <img src="https://cdn.helloworldindonesia.com/bG9nby9vcmlnaW5hbC9vcmlnaW5fdHh0X3YyLnN2Zw==" alt="logo" className="w-32" />
+                        <h1 className='font-bold tracking-widest'>HELLOWEDDING</h1>
                         <h2 className="text-4xl mt-5">Pre Wedding</h2>
                     </div>
                     <div className="bg-slate-300 w-2/3">
