@@ -12,8 +12,6 @@ function Signup() {
                         type={'email'}
                         placeholder="Ex: Jhon Doe"
                         className='w-full p-3 box-border bg-transparent rounded border-2 text-sm'
-                        // value={email}
-                        // onChange={(event) => setEmail(event.target.value)}
                         required
                     />
                     <span className='font-bold my-3'>Email</span>
@@ -21,8 +19,6 @@ function Signup() {
                         type={'email'}
                         placeholder="Ex: myemail@mail.com"
                         className='w-full p-3 box-border bg-transparent rounded border-2 text-sm'
-                        // value={email}
-                        // onChange={(event) => setEmail(event.target.value)}
                         required
                     />
                     <span className='font-bold my-3'>Password</span>
@@ -30,8 +26,6 @@ function Signup() {
                         type={'password'}
                         placeholder="Enter Password"
                         className='w-full p-3 box-border bg-transparent rounded border-2 text-sm'
-                        // value={password}
-                        // onChange={(event) => setPassword(event.target.value)}
                         required
                     />
                     <button className='w-full bg-[#646464] my-8 p-2 text-white rounded-md text-sm font-bold'>Sign Up</button>

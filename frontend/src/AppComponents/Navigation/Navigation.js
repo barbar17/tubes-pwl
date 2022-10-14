@@ -8,7 +8,7 @@ function Navigation() {
     const navigation = Link()
 
     return (
-        <nav className="flex py-3 px-14 w-full bg-white items-center justify-between sticky top-0 z-10 ">
+        <nav className="flex py-3 px-14 w-full bg-white items-center justify-between sticky top-0 z-20 ">
             <NavLink to={''}>
                 <h1 className='font-bold tracking-widest'>HELLOWEDDING</h1>
             </NavLink>

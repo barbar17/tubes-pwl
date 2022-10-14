@@ -1,10 +1,24 @@
 import React from 'react'
+import { HiArrowUp } from 'react-icons/hi'
 
 function Footer() {
-    return (
-        <div className="flex flex-col w-full justify-center items-center h-fit bg-[#ebebeb] py-10 px-20">
 
-            <img src="https://cdn.helloworldindonesia.com/bG9nby9vcmlnaW5hbC9vcmlnaW5fdHh0X3YyLnN2Zw==" alt="logo" className="w-36" />
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
+    return (
+        <div className="flex flex-col w-full justify-center items-center h-fit bg-[#ebebeb] py-10 px-20 relative">
+
+            <button className='absolute top-0 right-0 p-2 w-12 grey flex text-gray-500 flex-col h-24 justify-between items-center' onClick={scrollToTop}>
+                <HiArrowUp className='h-1/5' />
+                <span className='transform -rotate-90 w-32'>Back To Top</span>
+            </button>
+
+            <h1 className='font-bold tracking-widest mt-10'>HELLOWEDDING</h1>
 
             <div className="flex justify-between w-full">
                 <div className="flex items-center justify-center text-xs">
@@ -47,7 +61,7 @@ function Footer() {
             </div>
 
             <div>
-                <span>&copy 2022, Hello World Photography</span>
+                <span>&copy; 2022, Hello Wedding</span>
             </div>
         </div>
     )
