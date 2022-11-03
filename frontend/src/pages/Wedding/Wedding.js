@@ -2,7 +2,7 @@ import React from 'react'
 
 function Wedding() {
     return (
-        <div className='w-full flex flex-col items-center p-10'>
+        <div className='flex flex-col items-center p-10'>
             <h1 className='text-7xl text-gray-500'>Wedding Journal</h1>
             <div className='w-4/5 shadow-md flex border-2 border-gray-200 my-10 p-10 flex-col justify-center items-center'>
                 <img src='grid2.jpg' alt='fotowedding' className='w-11/12 object-cover' />
@@ -19,6 +19,28 @@ function Wedding() {
                         <span className='text-lg text-gray-400 pt-5'><i>READ MORE</i></span>
                     </div>
                 </div>
+            </div>
+
+            <div className='w-4/5'>
+                <div className='flex flex-col w-full items-center my-5'>
+                    <span className='text-2xl'>A SOULFUL RENDEZVOUZ</span>
+                    <hr className='w-3/5 border-2 my-2' />
+                    <span className='text-lg text-gray-400'>ARUM & REZA WEDDING BY HELLO WEDDING</span>
+                </div>
+
+                <div className='w-full mb-10'>
+                    <img src='grid5.jpg' alt='wedding2' className='h-[650px] w-full object-cover mb-10' />
+                    <span className='text-xl'><i>Story about this wedding</i></span>
+                </div>
+            </div>
+
+            <div className='w-full px-10 my-10'>
+                <img src='wedding3.png' alt='wedding4' className='w-full h-screen object-cover' />
+            </div>
+
+            <div className='w-full px-10 space-x-4 flex my-10'>
+                <img src='wedding4.png' alt='wedding4' className='w-1/2 h-screen object-cover' />
+                <img src='wedding5.png' alt='wedding4' className='w-1/2 h-screen object-cover' />
             </div>
         </div>
     )
