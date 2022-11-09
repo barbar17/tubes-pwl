@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full scrollbar">
           <Navigation />
 
           <Outlet />
