@@ -3,8 +3,8 @@ import { getUsers, Register, Login } from "../controllers/Users.js";
 
 const router = express.Router();
 
-router.get("/Users", getUsers);
-router.post("/Users", Register);
+router.get("/users", getUsers);
+router.post("/users", Register);
 router.post("/login", Login);
 
 export default router;
