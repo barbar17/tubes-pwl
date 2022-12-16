@@ -1,10 +1,17 @@
 import express from "express";
-import cors from "cors";
-import UserRoute from "./routes/UserRoute.js";
-
+import dotenv from "dotenv";
+import db from "./config/Database.js";
+import router from "./routes/index.js";
+dotenv.config();
 const app = express();
-app.use(cors());
-app.use(express.json());
-app.use(UserRoute);
 
-app.listen(5000, ()=> console.log('Server up and running...'));
+try {
+  await db.authenticate();
+  console.log("database connected.....");
+} catch (error) {
+  console.error(error);
+}
+
+app.use(express.json());
+app.use(router);
+app.listen(5000, () => console.log("Server up and running..."));
