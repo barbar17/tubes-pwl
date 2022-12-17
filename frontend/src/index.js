@@ -1,37 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Homepage from './pages/Homepage/Homepage';
-import Wedding from './pages/Wedding/Wedding';
-import Prewedding from './pages/Prewedding/Prewedding';
-import Potrait from './pages/Potrait/Potrait';
-import About from './pages/About/About';
-import Package from './pages/Package/Package';
-import Signin from './pages/Signin/Signin';
-import Signup from './pages/Signup/Signup';
+import Homepage from "./pages/Homepage/Homepage";
+import Wedding from "./pages/Wedding/Wedding";
+import Prewedding from "./pages/Prewedding/Prewedding";
+import Potrait from "./pages/Potrait/Potrait";
+import About from "./pages/About/About";
+import Package from "./pages/Package/Package";
+import Signin from "./pages/Signin/Signin";
+import Signup from "./pages/Signup/Signup";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route exact path='*' element={<App />}>
-          <Route path='' element={<Homepage />} />
-          <Route path='wedding' element={<Wedding />} />
-          <Route path='prewedding' element={<Prewedding />} />
-          <Route path='potrait' element={<Potrait />} />
-          <Route path='about' element={<About />} />
-          <Route path='package' element={<Package />} />
+        <Route exact path="*" element={<App />}>
+          <Route path="" element={<Homepage />} />
+          <Route path="wedding" element={<Wedding />} />
+          <Route path="prewedding" element={<Prewedding />} />
+          <Route path="potrait" element={<Potrait />} />
+          <Route path="about" element={<About />} />
+          <Route path="package" element={<Package />} />
         </Route>
-        <Route path='signin' element={<Signin />} />
-        <Route path='signup' element={<Signup />} />
+        <Route path="signin" element={<Signin />} />
+        <Route path="signup" element={<Signup />} />
       </Routes>
     </BrowserRouter>
-
   </React.StrictMode>
 );
 
