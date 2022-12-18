@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Signup = () => {
+function Signup() {
   const [username, setuserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -45,6 +45,6 @@ const Signup = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Signup;

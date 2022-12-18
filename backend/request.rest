@@ -1,5 +1,6 @@
 GET http://localhost:5000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5AZ21haWwuY29tIiwiaWF0IjoxNjcxMjQ4NzQ0LCJleHAiOjE2NzEyNDg3NjR9.D2_agBfhLWz4RgatRANZLylZxS0QmbLm_DgI3TaQybk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE2NzEzNDQ3MTMsImV4cCI6MTY3MTM0NDcyOH0.9xORBKMA7355KjJFREMvCPBeuXfKrFQR73tIPbHBPzA
+
 ###
 POST http://localhost:5000/users
 Content-Type: application/json

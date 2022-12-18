@@ -11,11 +11,21 @@ function Signin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/login", {
-        email: email,
-        password: password,
-      });
-      navigate("/");
+      await axios
+        .post(
+          "http://localhost:5000/login",
+          {
+            email: email,
+            password: password,
+          },
+          {
+            withCredentials: true,
+          }
+        )
+        .then((response) => {
+          console.log(response);
+        });
+      navigate("/About");
     } catch (error) {
       if (error.response) {
         alert("Email atau Password Salah!!");
@@ -30,9 +40,9 @@ function Signin() {
         <h1 className="text-3xl font-bold my-5">Sign In</h1>
         <form onSubmit={handleSubmit} className="flex flex-col w-full">
           <span className="font-bold my-3">Email</span>
-          <input type={"email"} placeholder="Ex: myemail@mail.com" className="w-full p-3 box-border bg-transparent rounded border-2 text-sm" value={email} onChange={(event) => setEmail(event.target.value)} required />
+          <input type={"email"} placeholder="Ex: myemail@mail.com" className="w-full p-3 box-border bg-transparent rounded border-2 text-sm" value={email} onChange={(e) => setEmail(e.target.value)} required />
           <span className="font-bold my-3">Password</span>
-          <input type={"password"} placeholder="Enter Password" className="w-full p-3 box-border bg-transparent rounded border-2 text-sm" value={password} onChange={(event) => setPassword(event.target.value)} required />
+          <input type={"password"} placeholder="Enter Password" className="w-full p-3 box-border bg-transparent rounded border-2 text-sm" value={password} onChange={(e) => setPassword(e.target.value)} required />
           <button className="w-full bg-[#646464] my-8 p-2 text-white rounded-md text-sm font-bold">Sign In</button>
         </form>
         <span>
