@@ -13,6 +13,12 @@ import About from "./pages/About/About";
 import Package from "./pages/Package/Package";
 import Signin from "./pages/Signin/Signin";
 import Signup from "./pages/Signup/Signup";
+import Admin from './pages/Admin/Admin';
+import Pesanan from './pages/Admin/Pesanan/Pesanan';
+import AdminPackage from './pages/Admin/Package/AdminPackage';
+import Additional from './pages/Admin/Additional/Additional';
+import EditPackage from './pages/Admin/Package/EditPackage';
+import EditAdditional from './pages/Admin/Additional/EditAdditional';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -27,6 +33,15 @@ root.render(
           <Route path="about" element={<About />} />
           <Route path="package" element={<Package />} />
         </Route>
+
+        <Route path='admin' element={<Admin />}>
+          <Route path='pesanan' element={<Pesanan />} />
+          <Route path='paket' element={<AdminPackage />} />
+          <Route path='paket/edit' element={<EditPackage />} />
+          <Route path='additional' element={<Additional />} />
+          <Route path='additional/edit' element={<EditAdditional />} />
+        </Route>
+
         <Route path="signin" element={<Signin />} />
         <Route path="signup" element={<Signup />} />
       </Routes>
