@@ -18,6 +18,9 @@ const Users = db.define(
     refresh_token: {
       type: DataTypes.TEXT,
     },
+    tipeakun: {
+      type: DataTypes.STRING,
+    },
   },
   {
     freezeTableName: true,

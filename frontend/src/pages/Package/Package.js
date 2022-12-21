@@ -1,7 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import jwt_decode from "jwt-decode";
+import { useNavigate } from "react-router-dom";
 
 function Package() {
+  const navigate = useNavigate();
+  const [token, setToken] = useState("");
+  const [expire, setExpire] = useState("");
+
+  useEffect(() => {
+    refreshToken();
+  }, []);
+
+  const refreshToken = async () => {
+    try {
+      console.log(document.cookie);
+      const response = await axios.get("http://localhost:5000/token", {
+        withCredentials: true,
+      });
+      setToken(response.data.accessToken);
+      const decoded = jwt_decode(response.data.accessToken);
+      setExpire(decoded.exp);
+    } catch (error) {
+      if (error.response) {
+        console.log("");
+      }
+    }
+  };
+
+  const axiosJWT = axios.create();
+
+  axiosJWT.interceptors.request.use(
+    async (config) => {
+      const currentDate = new Date();
+      if (expire * 1000 < currentDate.getTime()) {
+        console.log("basing");
+        const response = await axios.get("http://localhost:5000/token", {
+          withCredentials: true,
+        });
+        config.headers.Authorization = `Bearer ${response.data.accessToken}`;
+        setToken(response.data.accessToken);
+        const decoded = jwt_decode(response.data.accessToken);
+        setExpire(decoded.exp);
+      }
+      return config;
+    },
+    (error) => {
+      return Promise.reject(error);
+    }
+  );
+
+  const order = async () => {
+    try {
+      const response = await axiosJWT.get("http://localhost:5000/users", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+    } catch (error) {
+      navigate("/signin");
+    }
+  };
+
   return (
     <div className="w-full h-screen flex flex-col items-center">
       <div className="mt-20 font-serif text-4xl">
@@ -38,7 +99,11 @@ function Package() {
                 </ul>
               </div>
               <div className="font-serif self-end">
-                <Link to={'/payment'}><button className="bg-[#d9d9d9] p-2 mt-4 italic">ORDER NOW</button></Link>
+                <Link to={"/payment"}>
+                  <button onClick={order} className="bg-[#d9d9d9] p-2 mt-4 italic">
+                    ORDER NOW
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -68,7 +133,11 @@ function Package() {
                 </ul>
               </div>
               <div className="font-serif self-end">
-                <Link to={'/payment'}><button className="bg-[#d9d9d9] p-2 mt-4 italic">ORDER NOW</button></Link>
+                <Link to={"/payment"}>
+                  <button onClick={order} className="bg-[#d9d9d9] p-2 mt-4 italic">
+                    ORDER NOW
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

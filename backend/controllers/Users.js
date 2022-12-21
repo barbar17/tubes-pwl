@@ -15,6 +15,7 @@ export const getUsers = async (req, res) => {
 
 export const Register = async (req, res) => {
   const { username, email, password, confPassword } = req.body;
+  const tipeakun = "user";
   if (password !== confPassword) return res.status(400).json({ msg: "Password dan Confirm Password tidak cocok" });
   const salt = await bcrypt.genSalt();
   const hashPassword = await bcrypt.hash(password, salt);
@@ -23,6 +24,7 @@ export const Register = async (req, res) => {
       username: username,
       email: email,
       password: hashPassword,
+      tipeakun: tipeakun,
     });
     res.json({ msg: "Register Berhasil" });
   } catch (error) {

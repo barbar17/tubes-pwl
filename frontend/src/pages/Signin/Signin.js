@@ -25,7 +25,7 @@ function Signin() {
         .then((response) => {
           console.log(response);
         });
-      navigate("/About");
+      navigate("/");
     } catch (error) {
       if (error.response) {
         alert("Email atau Password Salah!!");

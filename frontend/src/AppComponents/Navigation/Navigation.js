@@ -3,8 +3,10 @@ import axios from "axios";
 import { FiMenu } from "react-icons/fi";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Link } from "./NavLink";
+import { LinkUser } from "./NavLinkUser";
 
-function Navigation() {
+function Navigation({ tipeakun }) {
+  let navigation = tipeakun === "user" ? LinkUser() : Link();
   const navigate = useNavigate();
 
   const Logout = async () => {
@@ -15,8 +17,6 @@ function Navigation() {
       console.log(error);
     }
   };
-
-  const navigation = Link();
 
   return (
     <nav className="flex py-3 px-14 w-full bg-[#F1EFEF] items-center justify-between sticky top-0 z-20 ">

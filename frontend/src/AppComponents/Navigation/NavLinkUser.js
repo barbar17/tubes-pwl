@@ -1,5 +1,5 @@
-export function Link() {
-  const link = [
+export function LinkUser() {
+  const linkuser = [
     {
       title: "WEDDING",
       path: "/wedding",
@@ -30,13 +30,7 @@ export function Link() {
       active: "px-5 text-gray-400",
       notActive: "px-5 hover:text-gray-400 transition-colors",
     },
-    {
-      title: "SIGN IN",
-      path: "/signin",
-      active: "px-5 text-gray-400",
-      notActive: "px-5 hover:text-gray-400 transition-colors",
-    },
   ];
 
-  return link;
+  return linkuser;
 }
