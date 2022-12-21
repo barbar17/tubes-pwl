@@ -14,6 +14,7 @@ import Package from "./pages/Package/Package";
 import Signin from "./pages/Signin/Signin";
 import Signup from "./pages/Signup/Signup";
 import Progress from "./pages/Progress/Progress";
+import Payment from "./pages/Payment/Payment";
 
 import Admin from "./Admin/Admin";
 import Pesanan from "./Admin/Pesanan/Pesanan";
@@ -35,6 +36,7 @@ root.render(
           <Route path="about" element={<About />} />
           <Route path="package" element={<Package />} />
           <Route path="progress" element={<Progress />} />
+          <Route path="payment" element={<Payment />} />
         </Route>
 
         <Route path='admin' element={<Admin />}>

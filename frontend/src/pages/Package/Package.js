@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Package() {
   return (
@@ -37,7 +38,7 @@ function Package() {
                 </ul>
               </div>
               <div className="font-serif self-end">
-                <button className="bg-[#d9d9d9] p-2 mt-4 italic">ORDER NOW</button>
+                <Link to={'/payment'}><button className="bg-[#d9d9d9] p-2 mt-4 italic">ORDER NOW</button></Link>
               </div>
             </div>
           </div>
@@ -67,7 +68,7 @@ function Package() {
                 </ul>
               </div>
               <div className="font-serif self-end">
-                <button className="bg-[#d9d9d9] p-2 mt-4 italic">ORDER NOW</button>
+                <Link to={'/payment'}><button className="bg-[#d9d9d9] p-2 mt-4 italic">ORDER NOW</button></Link>
               </div>
             </div>
           </div>
