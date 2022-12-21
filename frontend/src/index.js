@@ -13,6 +13,8 @@ import About from "./pages/About/About";
 import Package from "./pages/Package/Package";
 import Signin from "./pages/Signin/Signin";
 import Signup from "./pages/Signup/Signup";
+import Progress from "./pages/Progress/Progress";
+
 import Admin from "./Admin/Admin";
 import Pesanan from "./Admin/Pesanan/Pesanan";
 import AdminPackage from "./Admin/Package/AdminPackage";
@@ -32,6 +34,7 @@ root.render(
           <Route path="potrait" element={<Potrait />} />
           <Route path="about" element={<About />} />
           <Route path="package" element={<Package />} />
+          <Route path="progress" element={<Progress />} />
         </Route>
 
         <Route path='admin' element={<Admin />}>
