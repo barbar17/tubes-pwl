@@ -13,12 +13,12 @@ import About from "./pages/About/About";
 import Package from "./pages/Package/Package";
 import Signin from "./pages/Signin/Signin";
 import Signup from "./pages/Signup/Signup";
-import Admin from './pages/Admin/Admin';
-import Pesanan from './pages/Admin/Pesanan/Pesanan';
-import AdminPackage from './pages/Admin/Package/AdminPackage';
-import Additional from './pages/Admin/Additional/Additional';
-import EditPackage from './pages/Admin/Package/EditPackage';
-import EditAdditional from './pages/Admin/Additional/EditAdditional';
+import Admin from "./Admin/Admin";
+import Pesanan from "./Admin/Pesanan/Pesanan";
+import AdminPackage from "./Admin/Package/AdminPackage";
+import EditPackage from "./Admin/Package/EditPackage";
+import Additional from "./Admin/Additional/Additional";
+import EditAdditional from "./Admin/Additional/EditAdditional";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
