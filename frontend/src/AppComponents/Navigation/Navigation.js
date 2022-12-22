@@ -18,6 +18,8 @@ function Navigation({ tipeakun }) {
     }
   };
 
+  const token = true;
+
   return (
     <nav className="flex py-3 px-14 w-full bg-[#F1EFEF] items-center justify-between sticky top-0 z-20 ">
       <NavLink to={""}>
@@ -33,7 +35,14 @@ function Navigation({ tipeakun }) {
               </NavLink>
             );
           })}
-          <button onClick={Logout}>Logout</button>
+          {
+            token
+              ? <button onClick={Logout} className={"px-5 hover:text-gray-400 transition-colors"}>LOG OUT</button>
+              : <NavLink to="/signin" className={({ isActive }) => (isActive ? "px-5 text-gray-400" : "px-5 hover:text-gray-400 transition-colors")}>
+                <span>SIGN IN</span>
+              </NavLink>
+          }
+
         </ul>
 
         <div className="flex bg-[#d9d9d9] px-5 py-1 w-52 rounded-md items-center">
